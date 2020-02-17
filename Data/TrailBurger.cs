@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: TrailBurger.cs
+ * Purpose: Handles the attributes of the Trail Burger Entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

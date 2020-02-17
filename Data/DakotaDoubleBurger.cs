@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: DakotaDoubleBurger.cs
+ * Purpose: Handles the attributes of the Dakota Double Burger Entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

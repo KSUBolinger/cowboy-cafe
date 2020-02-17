@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: CornDodgers.cs
+ * Purpose: Handles the attributes of the Corn Dodgers Side
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

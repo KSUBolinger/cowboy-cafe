@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: RustlersRibs.cs
+ * Purpose: Handles the attributes of the Rustlers Ribs Entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

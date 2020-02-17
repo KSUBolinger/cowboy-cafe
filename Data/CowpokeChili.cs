@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: CowpokeChili.cs
+ * Purpose: Handles the attributes of the Cowpoke chili entree
+ */
+using System;
 using System.Collections.Generic;
 
 namespace CowboyCafe.Data

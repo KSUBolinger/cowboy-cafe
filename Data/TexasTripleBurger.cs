@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: TexasTripleBurger.cs
+ * Purpose: Handles the attributes of the Texas Triple Burger Entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

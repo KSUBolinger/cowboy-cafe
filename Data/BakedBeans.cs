@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: BakedBeans.cs
+ * Purpose: Handles the attributes of the Baked Beans Side
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

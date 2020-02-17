@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: ChiliCheeseFries.cs
+ * Purpose: Handles the attributes of the Chili Cheese Fries Side
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

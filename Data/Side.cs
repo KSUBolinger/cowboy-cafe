@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: Side.cs
+ * Purpose: Creates the base class for all sides
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

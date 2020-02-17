@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: PanDeCampo.cs
+ * Purpose: Handles the attributes of the Pan De Campo Side
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

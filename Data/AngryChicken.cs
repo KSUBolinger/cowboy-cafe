@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: AngryChicken.cs
+ * Purpose: Handles the attributes of the Angry Chicken Entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

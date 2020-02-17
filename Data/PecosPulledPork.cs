@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: PecosPulledPork.cs
+ * Purpose: Handles the attributes of the Pecos Pulled Pork Entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
