@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: Entree.cs
+ * Purpose: Creation of the entree base class
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
