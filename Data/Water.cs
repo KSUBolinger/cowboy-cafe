@@ -41,7 +41,11 @@ namespace CowboyCafe.Data
         /// </summary>
         public bool Lemon { get; set; } = false;
 
+        /// <summary>
+        /// IF the water should have ice
+        /// </summary>
         public new bool Ice { get; set; } = true;
+
         /// <summary>
         /// Special Instructions for the preparation of the water
         /// </summary>

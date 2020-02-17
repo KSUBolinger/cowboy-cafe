@@ -85,6 +85,9 @@ namespace CowboyCafe.Data
         /// </summary>
         public bool Lemon { get; set; } = false;
 
+        /// <summary>
+        /// If the tea should include ice
+        /// </summary>
         public new bool Ice { get; set; } = true;
         /// <summary>
         /// Special Instructions for the preparation of the tea
