@@ -47,7 +47,7 @@ namespace CowboyCafe.Data
                 {
                     return 3;
                 }
-                else if(this.Size == Size.Small)
+                else if(this.Size == Size.Medium)
                 {
                     return 5;
                 }
@@ -61,11 +61,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Whether or not the coffee has ice
         /// </summary>
-        public bool Ice
-        {
-            get { return false; }
-            set { Ice = value; }
-        }
+        public new bool Ice { get; set; } = false;
 
 
         private bool Cream = false;
@@ -78,6 +74,12 @@ namespace CowboyCafe.Data
             set { Cream = value; }
         }
 
+        private bool decaf = false;
+        public bool Decaf
+        {
+            get { return decaf; }
+            set { decaf = value; }
+        }
         /// <summary>
         /// Special instructions for the preparation of the coffee
         /// </summary>
@@ -87,8 +89,8 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!Ice) instructions.Add("Add Ice");
-                if (!Cream) instructions.Add("Room for Cream");
+                if (Ice != false) instructions.Add("Add Ice");
+                if (Cream != false) instructions.Add("Room for Cream");
 
                 return instructions;
             }

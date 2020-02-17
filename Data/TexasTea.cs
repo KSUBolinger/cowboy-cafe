@@ -80,16 +80,12 @@ namespace CowboyCafe.Data
             set { sweet = value; }
         }
 
-        private bool lemon = false;
         /// <summary>
         /// If the tea should include a lemon
         /// </summary>
-        public bool Lemon
-        {
-            get { return lemon; }
-            set { lemon = value; }
-        }
+        public bool Lemon { get; set; } = false;
 
+        public new bool Ice { get; set; } = true;
         /// <summary>
         /// Special Instructions for the preparation of the tea
         /// </summary>
@@ -99,8 +95,8 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!lemon) instructions.Add("Add Lemon");
-                if (!Ice) instructions.Add("Hold Ice");
+                if (Lemon != false) instructions.Add("Add Lemon");
+                if (Ice != true) instructions.Add("Hold Ice");
 
                 return instructions;
             }

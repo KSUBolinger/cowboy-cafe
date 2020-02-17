@@ -17,7 +17,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Reference to the different sizes offered 
         /// </summary>
-        public virtual Size Size { get; set; }
+        public virtual Size Size { get; set; } = Size.Small;
         
         /// <summary>
         /// Price placeholder 
@@ -29,15 +29,10 @@ namespace CowboyCafe.Data
         /// </summary>
         public abstract uint Calories { get; }
 
-        private bool ice = true;
         /// <summary>
         /// if drink should have ice 
         /// </summary>
-        public bool Ice
-        {
-            get { return ice; }
-            set { ice = value; }
-        }
+        public bool Ice { get; set; } = true;
 
         /// <summary>
         /// Special instructions for preparing drink 
