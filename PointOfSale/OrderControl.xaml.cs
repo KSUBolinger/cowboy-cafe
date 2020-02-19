@@ -54,5 +54,9 @@ namespace PointOfSale
         {
             OrderListView.Items.Add(new RustlersRibs());
         }
+        void OnAddBakedBeansButtonClicked(object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new BakedBeans());
+        }
     }
 }

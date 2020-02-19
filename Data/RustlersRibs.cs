@@ -48,5 +48,14 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        /// <summary>
+        /// Returns the string representing the ribs
+        /// </summary>
+        /// <returns>string decribing the ribs</returns>
+        public override string ToString()
+        {
+            return "Rustler's Ribs";
+        }
     }
 }

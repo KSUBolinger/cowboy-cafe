@@ -35,7 +35,7 @@
         
         <StackPanel Grid.Column="1">
             <TextBlock TextAlignment="Center">Sides</TextBlock>
-            <Button Name="AddBakedBeansButton">Baked Beans</Button>
+            <Button Name="AddBakedBeansButton" Click="OnAddBakedBeansButtonClicked">Baked Beans</Button>
             <Button Name="AddChiliCheeseFriesButton"> Chili Cheese Fries</Button>
             <Button Name="AddCornDodgersButton">Corn Dodgers</Button>
             <Button Name="AddPanDeCampoButton">Pan De Campo</Button>
