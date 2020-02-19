@@ -1,13 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
 
     <AssemblyName>CowboyCafe.DataTests</AssemblyName>
 
     <RootNamespace>CowboyCafe.DataTests</RootNamespace>
+
+    <ApplicationIcon />
+
+    <Win32Resource />
   </PropertyGroup>
 
   <ItemGroup>
