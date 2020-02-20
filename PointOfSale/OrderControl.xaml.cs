@@ -58,5 +58,17 @@ namespace PointOfSale
         {
             OrderListView.Items.Add(new BakedBeans());
         }
+        void OnAddChiliCheeseFriesButtonClicked(object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new ChiliCheeseFries());
+        }
+        void OnAddCornDodgersButtonClicked(object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new CornDodgers());
+        }
+        void OnAddPanDeCampoButtonClicked(object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new PanDeCampo());
+        }
     }
 }

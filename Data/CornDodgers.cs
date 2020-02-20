@@ -57,5 +57,14 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
+        /// <summary>
+        /// Returns the string representing corn dodgers 
+        /// </summary>
+        /// <returns>string representing the corn dodgers</returns>
+        public override string ToString()
+        {
+            return Size.ToString() + " Corn Dodgers";
+        }
     }
 }
