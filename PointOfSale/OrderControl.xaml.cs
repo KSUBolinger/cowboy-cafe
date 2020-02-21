@@ -70,5 +70,13 @@ namespace PointOfSale
         {
             OrderListView.Items.Add(new PanDeCampo());
         }
+        void OnAddCowboyCoffeeButtonClicked(object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new CowboyCoffee());
+        }
+        void OnAddJerkedSodaButtonClicked(object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new JerkedSoda());
+        }
     }
 }
