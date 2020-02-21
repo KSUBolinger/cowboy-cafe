@@ -70,15 +70,11 @@ namespace CowboyCafe.Data
             }
         }
 
-        private bool sweet = true;
         /// <summary>
         /// IF the tea should be sweet
         /// </summary>
-        public bool Sweet
-        {
-            get { return sweet; }
-            set { sweet = value; }
-        }
+        public bool Sweet { get; set; } = true;
+       
 
         /// <summary>
         /// If the tea should include a lemon
@@ -100,6 +96,7 @@ namespace CowboyCafe.Data
 
                 if (Lemon != false) instructions.Add("Add Lemon");
                 if (Ice != true) instructions.Add("Hold Ice");
+                if (Sweet != true) instructions.Add("Plain");
 
                 return instructions;
             }
