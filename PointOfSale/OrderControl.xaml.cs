@@ -78,5 +78,13 @@ namespace PointOfSale
         {
             OrderListView.Items.Add(new JerkedSoda());
         }
+        void OnAddTexasTeaButtonClicked(object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new TexasTea());
+        }
+        void OnAddWaterButtonClicked(object sender, RoutedEventArgs e)
+        {
+            OrderListView.Items.Add(new Water());
+        }
     }
 }
