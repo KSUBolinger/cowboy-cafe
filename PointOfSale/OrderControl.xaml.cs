@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Easton Bolinger
+ * Class: OrderControl.xaml.cs
+ * Purpose: Handle the click events from the Order control screen
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

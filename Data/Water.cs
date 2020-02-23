@@ -62,6 +62,10 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Returns the string representing the water
+        /// </summary>
+        /// <returns>string decribing the water</returns>
         public override string ToString()
         {
             return Size.ToString() + " Water";

@@ -102,6 +102,10 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Returns the string representing the tea
+        /// </summary>
+        /// <returns>string decribing the tea</returns>
         public override string ToString()
         {
             string sweet;

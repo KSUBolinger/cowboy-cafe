@@ -96,6 +96,10 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Returns the string representing the coffee
+        /// </summary>
+        /// <returns>string decribing the coffee</returns>
         public override string ToString()
         {
             string decaf;
