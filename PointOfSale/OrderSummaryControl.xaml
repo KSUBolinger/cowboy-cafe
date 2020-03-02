@@ -6,19 +6,17 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="200">
-
+    <UserControl.Resources>
+        <Style TargetType="ListBoxItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid Background="Wheat">
         <Grid.RowDefinitions>
-            <RowDefinition Height="22"/>
-            <RowDefinition Height="404"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="31*"/>
-            <ColumnDefinition Width="9*"/>
-        </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" FontSize="15" TextAlignment="Center">Order</TextBlock>
-        <StackPanel Grid.Row="1" Grid.Column="0"></StackPanel>
-        <TextBlock Grid.Row="2" FontSize="15">Subtotal:</TextBlock>
+        <TextBlock Grid.Row="0" Text="{Binding Path=orderString}">Order</TextBlock>
     </Grid>
 </UserControl>

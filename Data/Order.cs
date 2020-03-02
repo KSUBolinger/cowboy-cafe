@@ -14,7 +14,7 @@ namespace CowboyCafe.Data
         private double subtotal;
         public double Subtotal => subtotal;
 
-        public uint OrderNumber { get; }
+        public uint OrderNumber => lastOrderNumber++;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -33,5 +33,6 @@ namespace CowboyCafe.Data
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
         }
+        public string OrderString => "Order" + OrderNumber.ToString();
     }
 }
