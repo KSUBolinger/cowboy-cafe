@@ -7,12 +7,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CowboyCafe.Data
+namespace CowboyCafe.Data 
 {
     /// <summary>
     /// Class representing the base drink 
     /// </summary>
-    public abstract class Drink
+    public abstract class Drink : IOrderItem
     {
         /// <summary>
         /// Reference to the different sizes offered 

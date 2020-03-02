@@ -7,9 +7,9 @@ namespace CowboyCafe.Data
 {
     public class Order
     {
-        private uint lastOrderNumber;
+        private uint lastOrderNumber = 1;
         private List<IOrderItem> items = new List<IOrderItem>();
-        public IEnumerable<IOrderItem> Items => items;
+        public IEnumerable<IOrderItem> Items => items.ToArray();
 
         private double subtotal;
         public double Subtotal => subtotal;
@@ -33,6 +33,6 @@ namespace CowboyCafe.Data
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
         }
-        public string OrderString => "Order" + OrderNumber.ToString();
+        public string OrderString => "Order " + OrderNumber.ToString();
     }
 }
