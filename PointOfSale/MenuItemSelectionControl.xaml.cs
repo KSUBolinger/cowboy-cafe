@@ -22,7 +22,6 @@ namespace PointOfSale
         public MenuItemSelectionControl()
         {
             InitializeComponent();
-            AddAngryChickenButton.Click += OnAddAngryChickenButtonClicked;
         }
         void OnAddAngryChickenButtonClicked(object sender, RoutedEventArgs e)
         {
