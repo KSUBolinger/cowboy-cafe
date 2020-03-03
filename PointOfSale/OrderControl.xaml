@@ -6,9 +6,12 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-
     <Grid>
-        <local:MenuItemSelectionControl></local:MenuItemSelectionControl>
-        <local:OrderSummaryControl Margin="712,0,0,0"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <local:MenuItemSelectionControl Margin="0,76,0,-76" Grid.Row="1"></local:MenuItemSelectionControl>
+        <local:OrderSummaryControl Margin="712,0,0,0" Grid.Row="1"/>
     </Grid>
 </UserControl>
