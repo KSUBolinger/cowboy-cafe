@@ -22,8 +22,9 @@ namespace CowboyCafe.Data
         {
             items.Add(item);
             subtotal += item.Price;
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            
         }
 
         public void Remove(IOrderItem item) 

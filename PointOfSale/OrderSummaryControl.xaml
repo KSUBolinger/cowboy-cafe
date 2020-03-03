@@ -19,7 +19,7 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Text="{Binding Path=OrderString}">Order</TextBlock>
         <StackPanel Grid.Row="1">
-            <ListBox ItemsSource="{Binding Path=Items}" Height="173">
+            <ListBox ItemsSource="{Binding Path =Items}" Height="173">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -28,14 +28,14 @@
                                 <ColumnDefinition Width="75"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="{Binding}"/>
-                            <TextBlock Grid.Column="1" Text="{Binding Path=Price, StringFormat=c}" HorizontalAlignment="Right"/>
+                            <TextBlock Grid.Column="1" Text="{Binding Path =Price, StringFormat=c}" HorizontalAlignment="Right"/>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
         <StackPanel Grid.Row="2">
-            <TextBlock Text="{Binding Subtotal, StringFormat={}Subtotal: {0:c}}" Height="41"/>
+            <TextBlock Text="{Binding Path =Subtotal, StringFormat={}Subtotal: {0:c}}" Height="41"/>
         </StackPanel>
     </Grid>
     
