@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
-    public class Order
+    public class Order : INotifyPropertyChanged
     {
         /// <summary>
         /// gives the order number from last order

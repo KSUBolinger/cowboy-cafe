@@ -6,12 +6,35 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="50"/>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <local:MenuItemSelectionControl Margin="0,76,0,-76" Grid.Row="1"></local:MenuItemSelectionControl>
-        <local:OrderSummaryControl Margin="712,0,0,0" Grid.Row="1"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="Container" Grid.Column="0" Grid.Row="1">
+            <local:MenuItemSelectionControl></local:MenuItemSelectionControl>
+            
+        </Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0">Test</Button>
+            <Button Grid.Column="1">Test2</Button>
+            <Button Grid.Column="2">Test3</Button>
+        </Grid>
+        
+        <local:OrderSummaryControl Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"/>
     </Grid>
 </UserControl>

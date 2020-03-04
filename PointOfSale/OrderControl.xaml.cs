@@ -32,9 +32,9 @@ namespace PointOfSale
             this.DataContext = order;
         }
 
-        private void OrderSummaryControl_Loaded(object sender, RoutedEventArgs e)
+        public void SwapScreen(UIElement element)
         {
-
+            Container.Child = element;
         }
     }
 }

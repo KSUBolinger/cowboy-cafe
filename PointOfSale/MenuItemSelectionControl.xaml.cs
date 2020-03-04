@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using CowboyCafe.Extension;
 
 namespace PointOfSale
 {
@@ -126,6 +127,29 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 order.Add(new Water());
+            }
+        }
+        private OrderControl orderControl;
+        public void OnItemAddButtonClicked(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<OrderControl>();
+            if(DataContext is Order order)
+            {
+
+                if(sender is Button button)
+                {
+                    switch (button.Tag)
+                    {
+                        case "AngryChicken":
+                            //change this stuff to match the entrees
+                            var entree = new AngryChicken();
+                            var screen = new CustomizedCowpokeChili();
+                            screen.DataContext = entree;
+                            order.Add(new AngryChicken());
+                            orderControl.SwapScreen(new CustomizedCowpokeChili());
+                            break;
+                    }
+                }
             }
         }
     }
