@@ -35,6 +35,7 @@ namespace PointOfSale
         {
             if(DataContext is Order order)
             {
+                OnItemAddButtonClicked(sender, e);
                 order.Add(new CowpokeChili());
             }
         }
@@ -129,6 +130,7 @@ namespace PointOfSale
                 order.Add(new Water());
             }
         }
+
         private OrderControl orderControl;
         public void OnItemAddButtonClicked(object sender, RoutedEventArgs e)
         {
@@ -138,16 +140,21 @@ namespace PointOfSale
 
                 if(sender is Button button)
                 {
-                    switch (button.Tag)
+                    if((string)button.Tag == "CowpokeChili")
                     {
-                        case "AngryChicken":
-                            //change this stuff to match the entrees
-                            var entree = new AngryChicken();
-                            var screen = new CustomizedCowpokeChili();
-                            screen.DataContext = entree;
-                            order.Add(new AngryChicken());
-                            orderControl.SwapScreen(new CustomizedCowpokeChili());
-                            break;
+                        var entree = new CowpokeChili();
+                        var screen = new CustomizedCowpokeChili();
+                        screen.DataContext = entree;
+                        order.Add(new CowpokeChili());
+                        orderControl.SwapScreen(new CustomizedCowpokeChili());
+                    }
+                    else if((string)button.Tag == "AngryChicken")
+                    {
+                        var entree = new AngryChicken();
+                        var screen = new CustomizedAngryChicken();
+                        screen.DataContext = entree;
+                        order.Add(new AngryChicken());
+                        orderControl.SwapScreen(new CustomizedAngryChicken());
                     }
                 }
             }

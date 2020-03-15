@@ -28,13 +28,30 @@ namespace PointOfSale
         {
             InitializeComponent();
             //AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
-            var order = new Order();
+            var order = new Order(1);
             this.DataContext = order;
         }
 
         public void SwapScreen(UIElement element)
         {
             Container.Child = element;
+        }
+
+        private void OnCompleteOrderButtonClicked(object sender, RoutedEventArgs e)
+        {
+            Order order = (Order)this.DataContext;
+            this.DataContext = new Order(order.OrderNumber + 1);
+        }
+
+        private void OnCancelOrderButtonClicked(object sender, RoutedEventArgs e)
+        {
+            Order order = (Order)this.DataContext;
+            this.DataContext = new Order(order.OrderNumber + 1);
+        }
+
+        private void OnItemSelectionButtonClicked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -10,7 +10,8 @@ namespace CowboyCafe.Data
         /// <summary>
         /// gives the order number from last order
         /// </summary>
-        private uint lastOrderNumber = 1;
+        //private uint lastOrderNumber = 1;
+
         /// <summary>
         /// creaetes a list for items in new order
         /// </summary>
@@ -29,7 +30,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// increases order number by one
         /// </summary>
-        public uint OrderNumber => lastOrderNumber++;
+        public uint OrderNumber { get; private set; }
 
         /// <summary>
         /// handles when properties have been changed
@@ -64,5 +65,11 @@ namespace CowboyCafe.Data
         /// a string representing the order number 
         /// </summary>
         public string OrderString => "Order " + OrderNumber.ToString();
+
+        public Order(uint number)
+        {
+            items = new List<IOrderItem>();
+            OrderNumber = number;
+        }
     }
 }
