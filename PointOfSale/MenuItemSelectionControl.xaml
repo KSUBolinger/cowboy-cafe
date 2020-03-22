@@ -18,11 +18,11 @@
             <TextBlock TextAlignment="Center">Entree</TextBlock>
             <Button Name="AddAngryChickenButton" Click="OnAddAngryChickenButtonClicked" Tag="AngryChicken">Angry Chicken</Button>
             <Button Name="AddCowpokeChiliButton" Click="OnAddCowpokeChiliButtonClicked" Tag="CowpokeChili">Cowpoke Chili</Button>
-            <Button Name="AddTrailBurgerButton" Click="OnAddTrailBurgerButtonClicked">Trail Burger</Button>
-            <Button Name="AddDakotaDoubleBurgerButton" Click="OnAddDakotaDoubleBurgerButtonClicked">Dakota Double Burger</Button>
-            <Button Name="AddTexasTripleBurgerButton" Click="OnAddTexasTripleBurgerButtonClicked">Texas Triple Burger</Button>
-            <Button Name="AddPecosPulledPorkButton" Click="OnAddPecosPulledPorkButtonClicked">Pecos Pulled Pork</Button>
-            <Button Name="AddRustlersRibsButton" Click="OnAddRustlersRibsButtonClicked">Rustler's Ribs</Button>
+            <Button Name="AddTrailBurgerButton" Click="OnAddTrailBurgerButtonClicked" Tag="TrailBurger">Trail Burger</Button>
+            <Button Name="AddDakotaDoubleBurgerButton" Click="OnAddDakotaDoubleBurgerButtonClicked" Tag="DakotaDoubleBurger">Dakota Double Burger</Button>
+            <Button Name="AddTexasTripleBurgerButton" Click="OnAddTexasTripleBurgerButtonClicked" Tag="TexasTripleBurger">Texas Triple Burger</Button>
+            <Button Name="AddPecosPulledPorkButton" Click="OnAddPecosPulledPorkButtonClicked" Tag="PecosPulledPork">Pecos Pulled Pork</Button>
+            <Button Name="AddRustlersRibsButton" Click="OnAddRustlersRibsButtonClicked" Tag="RustlersRibs">Rustler's Ribs</Button>
         </StackPanel>
 
         <StackPanel Grid.Column="1">
@@ -35,10 +35,10 @@
 
         <StackPanel Grid.Column="2">
             <TextBlock TextAlignment="Center">Drinks</TextBlock>
-            <Button Name="AddCowboyCoffeeButton" Click="OnAddCowboyCoffeeButtonClicked">Cowboy Coffee</Button>
+            <Button Name="AddCowboyCoffeeButton" Click="OnAddCowboyCoffeeButtonClicked" Tag="CowboyCoffee">Cowboy Coffee</Button>
             <Button Name="AddJerkedSodaButton" Click="OnAddJerkedSodaButtonClicked">Jerked Soda</Button>
-            <Button Name="AddTexasTeaButton" Click="OnAddTexasTeaButtonClicked">Texas Tea</Button>
-            <Button Name="AddWaterButton" Click="OnAddWaterButtonClicked">Water</Button>
+            <Button Name="AddTexasTeaButton" Click="OnAddTexasTeaButtonClicked" Tag="TexasTea">Texas Tea</Button>
+            <Button Name="AddWaterButton" Click="OnAddWaterButtonClicked" Tag="Water">Water</Button>
         </StackPanel>
     </Grid>
 </UserControl>

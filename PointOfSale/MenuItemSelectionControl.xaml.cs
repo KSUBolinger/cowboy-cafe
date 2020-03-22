@@ -28,7 +28,8 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Add(new AngryChicken());
+                OnItemAddButtonClicked(sender, e);
+                //order.Add(new AngryChicken());
             }
         }
         void OnAddCowpokeChiliButtonClicked(object sender, RoutedEventArgs e)
@@ -36,35 +37,39 @@ namespace PointOfSale
             if(DataContext is Order order)
             {
                 OnItemAddButtonClicked(sender, e);
-                order.Add(new CowpokeChili());
+                //order.Add(new CowpokeChili());
             }
         }
         void OnAddTrailBurgerButtonClicked(object sender, RoutedEventArgs e)
         {
             if(DataContext is Order order)
             {
-                order.Add(new TrailBurger());
+                OnItemAddButtonClicked(sender, e);
+                //order.Add(new TrailBurger());
             }
         }
         void OnAddDakotaDoubleBurgerButtonClicked(object sender, RoutedEventArgs e)
         {
             if(DataContext is Order order)
             {
-                order.Add(new DakotaDoubleBurger());
+                OnItemAddButtonClicked(sender, e);
+                //order.Add(new DakotaDoubleBurger());
             }
         }
         void OnAddTexasTripleBurgerButtonClicked(object sender, RoutedEventArgs e)
         {
             if(DataContext is Order order)
             {
-                order.Add(new TexasTripleBurger());
+                OnItemAddButtonClicked(sender, e);
+                //order.Add(new TexasTripleBurger());
             }
         }
         void OnAddPecosPulledPorkButtonClicked(object sender, RoutedEventArgs e)
         {
             if(DataContext is Order order)
             {
-                order.Add(new PecosPulledPork());
+                OnItemAddButtonClicked(sender, e);
+                //order.Add(new PecosPulledPork());
             }
         }
         void OnAddRustlersRibsButtonClicked(object sender, RoutedEventArgs e)
@@ -106,7 +111,8 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Add(new CowboyCoffee());
+                OnItemAddButtonClicked(sender, e);
+                //order.Add(new CowboyCoffee());
             }
         }
         void OnAddJerkedSodaButtonClicked(object sender, RoutedEventArgs e)
@@ -120,14 +126,16 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Add(new TexasTea());
+                OnItemAddButtonClicked(sender, e);
+                //order.Add(new TexasTea());
             }
         }
         void OnAddWaterButtonClicked(object sender, RoutedEventArgs e)
         {
             if (DataContext is Order order)
             {
-                order.Add(new Water());
+                OnItemAddButtonClicked(sender, e);
+                //order.Add(new Water());
             }
         }
 
@@ -135,26 +143,75 @@ namespace PointOfSale
         public void OnItemAddButtonClicked(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<OrderControl>();
-            if(DataContext is Order order)
+            if (DataContext is Order order)
             {
 
-                if(sender is Button button)
+                if (sender is Button button)
                 {
-                    if((string)button.Tag == "CowpokeChili")
+                    if ((string)button.Tag == "CowpokeChili")
                     {
                         var entree = new CowpokeChili();
                         var screen = new CustomizedCowpokeChili();
                         screen.DataContext = entree;
-                        order.Add(new CowpokeChili());
-                        orderControl.SwapScreen(new CustomizedCowpokeChili());
+                        //order.Add(new CowpokeChili());
+                        orderControl.SwapScreen(screen);
                     }
-                    else if((string)button.Tag == "AngryChicken")
+                    else if ((string)button.Tag == "AngryChicken")
                     {
                         var entree = new AngryChicken();
                         var screen = new CustomizedAngryChicken();
                         screen.DataContext = entree;
-                        order.Add(new AngryChicken());
-                        orderControl.SwapScreen(new CustomizedAngryChicken());
+                        //order.Add(new AngryChicken());
+                        orderControl.SwapScreen(screen);
+                    }
+                    else if((string)button.Tag == "TrailBurger")
+                    {
+                        var entree = new TrailBurger();
+                        var screen = new CustomizedTrailBurger();
+                        screen.DataContext = entree;
+                        orderControl.SwapScreen(screen);
+                    }
+                    else if ((string)button.Tag == "DakotaDoubleBurger")
+                    {
+                        var entree = new DakotaDoubleBurger();
+                        var screen = new CustomizedDakotaDoubleBurger();
+                        screen.DataContext = entree;
+                        orderControl.SwapScreen(screen);
+                    }
+                    else if ((string)button.Tag == "TexasTripleBurger")
+                    {
+                        var entree = new TexasTripleBurger();
+                        var screen = new CustomizedTexasTripleBurger();
+                        screen.DataContext = entree;
+                        orderControl.SwapScreen(screen);
+                    }
+                    else if ((string)button.Tag == "PecosPulledPork")
+                    {
+                        var entree = new PecosPulledPork();
+                        var screen = new CustomizedPecosPulledPork();
+                        screen.DataContext = entree;
+                        orderControl.SwapScreen(screen);
+                    }
+                    else if ((string)button.Tag == "CowboyCoffee")
+                    {
+                        var entree = new CowboyCoffee();
+                        var screen = new CustomizedCowboyCoffee();
+                        screen.DataContext = entree;
+                        orderControl.SwapScreen(screen);
+                    }
+                    else if ((string)button.Tag == "TexasTea")
+                    {
+                        var entree = new TexasTea();
+                        var screen = new CustomizedTexasTea();
+                        screen.DataContext = entree;
+                        orderControl.SwapScreen(screen);
+                    }
+                    else if ((string)button.Tag == "Water")
+                    {
+                        var entree = new Water();
+                        var screen = new CustomizedWater();
+                        screen.DataContext = entree;
+                        orderControl.SwapScreen(screen);
                     }
                 }
             }

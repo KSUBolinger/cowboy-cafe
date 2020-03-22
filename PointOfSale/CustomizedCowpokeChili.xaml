@@ -12,7 +12,11 @@
         <StackPanel Orientation="Horizontal">
             <Label>Green Onions</Label>
             <CheckBox IsChecked="{Binding Path=GreenOnions}"/>
+            <Label>Cheese</Label>
+            <CheckBox IsChecked="{Binding Path=Cheese}"/>
+            <Label>Sour Cream</Label>
+            <CheckBox IsChecked="{Binding Path=SourCream}"/>
         </StackPanel>
-        <Button Name="AddItem" Click="">Add Item</Button>
+        <Button Name="AddItem" Click="OnAddItemButtonClicked">Add Item</Button>
     </StackPanel>
 </UserControl>
