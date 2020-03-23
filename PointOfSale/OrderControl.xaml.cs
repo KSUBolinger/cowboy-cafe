@@ -51,6 +51,9 @@ namespace PointOfSale
 
         private void OnItemSelectionButtonClicked(object sender, RoutedEventArgs e)
         {
+            //Order order = (Order)this.DataContext;
+            //order.Add()
+            Container.Child = new MenuItemSelectionControl();
 
         }
     }
