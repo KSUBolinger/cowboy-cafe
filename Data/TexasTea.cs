@@ -69,22 +69,47 @@ namespace CowboyCafe.Data
                 }
             }
         }
-
+        private bool sweet = true;
         /// <summary>
         /// IF the tea should be sweet
         /// </summary>
-        public bool Sweet { get; set; } = true;
-       
+        public bool Sweet 
+        {
+            get { return sweet; }
+            set
+            {
+                sweet = value;
+                NotifyPropertyChanged("Sweet");
+            }
+        }
 
+        private bool lemon = false;
         /// <summary>
         /// If the tea should include a lemon
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public bool Lemon
+        {
+            get { return lemon; }
+            set
+            {
+                lemon = value;
+                NotifyPropertyChanged("Lemon");
+            }
+        }
 
+        private bool ice = true;
         /// <summary>
         /// If the tea should include ice
         /// </summary>
-        public new bool Ice { get; set; } = true;
+        public new bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                NotifyPropertyChanged("Ice");
+            }
+        }
         /// <summary>
         /// Special Instructions for the preparation of the tea
         /// </summary>

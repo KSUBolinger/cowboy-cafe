@@ -6,13 +6,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data 
 {
     /// <summary>
     /// Class representing the base drink 
     /// </summary>
-    public abstract class Drink : IOrderItem
+    public abstract class Drink : IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Reference to the different sizes offered 
@@ -38,5 +39,13 @@ namespace CowboyCafe.Data
         /// Special instructions for preparing drink 
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyPropertyChanged(string property)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+        }
     }
 }

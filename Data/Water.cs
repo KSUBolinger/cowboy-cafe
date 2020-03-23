@@ -36,15 +36,33 @@ namespace CowboyCafe.Data
             }
         }
 
+        private bool lemon = false;
         /// <summary>
         /// If the water should have a lemon
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public bool Lemon
+        {
+            get { return lemon; }
+            set
+            {
+                lemon = value;
+                NotifyPropertyChanged("Lemon");
+            }
+        }
 
+        private bool ice = true;
         /// <summary>
         /// IF the water should have ice
         /// </summary>
-        public new bool Ice { get; set; } = true;
+        public new bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                NotifyPropertyChanged("Ice");
+            }
+        }
 
         /// <summary>
         /// Special Instructions for the preparation of the water

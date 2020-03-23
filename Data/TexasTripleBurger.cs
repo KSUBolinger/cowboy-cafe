@@ -21,7 +21,11 @@ namespace CowboyCafe.Data
         public bool Bun
         {
             get { return bun; }
-            set { bun = value; }
+            set 
+            { 
+                bun = value;
+                NotifyPropertyChanged("Bun");
+            }
         }
 
         private bool ketchup = true;
@@ -31,7 +35,11 @@ namespace CowboyCafe.Data
         public bool Ketchup
         {
             get { return ketchup; }
-            set { ketchup = value; }
+            set 
+            { 
+                ketchup = value;
+                NotifyPropertyChanged("Ketchup");
+            }
         }
 
         private bool mustard = true;
@@ -41,7 +49,11 @@ namespace CowboyCafe.Data
         public bool Mustard
         {
             get { return mustard; }
-            set { mustard = value; }
+            set 
+            {
+                mustard = value;
+                NotifyPropertyChanged("Mustard");
+            }
         }
 
         private bool pickle = true;
@@ -51,7 +63,11 @@ namespace CowboyCafe.Data
         public bool Pickle
         {
             get { return pickle; }
-            set { pickle = value; }
+            set 
+            { 
+                pickle = value;
+                NotifyPropertyChanged("Pickle");
+            }
         }
 
         private bool cheese = true;
@@ -61,7 +77,11 @@ namespace CowboyCafe.Data
         public bool Cheese
         {
             get { return cheese; }
-            set { cheese = value; }
+            set 
+            { 
+                cheese = value;
+                NotifyPropertyChanged("Cheese");
+            }
         }
 
         private bool tomato = true;
@@ -71,7 +91,11 @@ namespace CowboyCafe.Data
         public bool Tomato
         {
             get { return tomato; }
-            set { tomato = value; }
+            set 
+            { 
+                tomato = value;
+                NotifyPropertyChanged("Tomato");
+            }
         }
 
         private bool lettuce = true;
@@ -81,7 +105,11 @@ namespace CowboyCafe.Data
         public bool Lettuce
         {
             get { return lettuce; }
-            set { lettuce = value; }
+            set 
+            { 
+                lettuce = value;
+                NotifyPropertyChanged("Lettuce");
+            }
         }
 
         private bool mayo = true;
@@ -91,7 +119,11 @@ namespace CowboyCafe.Data
         public bool Mayo
         {
             get { return mayo; }
-            set { mayo = value; }
+            set 
+            { 
+                mayo = value;
+                NotifyPropertyChanged("Mayo");
+            }
         }
 
         private bool bacon = true;
@@ -101,7 +133,11 @@ namespace CowboyCafe.Data
         public bool Bacon
         {
             get { return bacon; }
-            set { bacon = value; }
+            set 
+            { 
+                bacon = value;
+                NotifyPropertyChanged("Bacon");
+            }
         }
 
         private bool egg = true;
@@ -111,7 +147,11 @@ namespace CowboyCafe.Data
         public bool Egg
         {
             get { return egg; }
-            set { egg = value; }
+            set 
+            { 
+                egg = value;
+                NotifyPropertyChanged("Egg");
+            }
         }
 
         /// <summary>
