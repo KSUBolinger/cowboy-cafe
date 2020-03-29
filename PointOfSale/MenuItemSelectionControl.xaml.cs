@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*MenuItemSelectionControl.xaml.cs
+ * Author: Easton Bolinger
+ * Purpose: handles the backend for the item selection UI
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
