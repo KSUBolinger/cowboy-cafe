@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.CustomizedTexasTea"
+﻿<UserControl x:Class="PointOfSale.CustomizedJerkSoda"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,17 +9,17 @@
     <UserControl.Resources>
         <Style TargetType="Label">
             <Setter Property="Foreground" Value="Wheat"/>
-            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontSize" Value="40"/>
         </Style>
 
         <Style TargetType="Button">
             <Setter Property="Height" Value="50"/>
-            <Setter Property="Width" Value="150"/>
-            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Width" Value="110"/>
+            <Setter Property="FontSize" Value="14"/>
         </Style>
     </UserControl.Resources>
     <StackPanel>
-        <TextBlock FontSize="45" Text="Customized Texas Tea" Foreground="Wheat" HorizontalAlignment="Center"/>
+        <TextBlock FontSize="45" Text="Customized Jerked Soda" Foreground="Wheat" HorizontalAlignment="Center"/>
         <StackPanel Orientation="Vertical">
             <Label>Size</Label>
                 <StackPanel Orientation="Horizontal">
@@ -27,20 +27,18 @@
                     <Button Name="Medium_Button" Click="Button_Clicked">Medium</Button>
                     <Button Name="Large_Button" Click="Button_Clicked">Large</Button>
                 </StackPanel>
-            <Label>Sweet Options</Label>
+            <Label>Flavors</Label>
                 <StackPanel Orientation="Horizontal">
-                    <Button Name="Sweet_Button" Click="Button_Clicked">Sweet</Button>
-                    <Button Name="Plain_Button" Click="Button_Clicked">Unsweetened</Button>
+                    <Button Name="BirchBeer_Button" Click="Button_Clicked">Birch Beer</Button>
+                    <Button Name="Rootbeer_Button" Click="Button_Clicked">Rootbeer</Button>
+                    <Button Name="CreamSoda_Button" Click="Button_Clicked">Cream Soda</Button>
+                    <Button Name="OrangeSoda_Button" Click="Button_Clicked">Orange Soda</Button>
+                    <Button Name="Sarsparilla_Button" Click="Button_Clicked">Sarsparilla</Button>
                 </StackPanel>
-            <Label>Lemon Options</Label>
+            <Label>Ice</Label>
                 <StackPanel Orientation="Horizontal">
-                    <Button Name="Lemon_Button" Click="Button_Clicked">Lemon</Button>
-                    <Button Name="NoLemon_Button" Click="Button_Clicked">No Lemon Added</Button>
-                </StackPanel>
-            <Label>Ice Options</Label>
-                <StackPanel Orientation="Horizontal">
-                    <Button Name="Ice_Button" Click="Button_Clicked">Ice Added</Button>
-                    <Button Name="NoIce_Button" Click="Button_Clicked">No Ice Added</Button>
+                    <Button Name="Ice_Button" Click="Button_Clicked">Ice</Button>
+                    <Button Name="NoIce_Button" Click="Button_Clicked">No Ice</Button>
                 </StackPanel>
         </StackPanel>
     </StackPanel>

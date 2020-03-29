@@ -236,7 +236,11 @@ namespace PointOfSale
             }
         }
 
-
+        /// <summary>
+        /// adds the cowboy coffee to the order
+        /// </summary>
+        /// <param name="sender">the cowboy coffee</param>
+        /// <param name="e">information associated with the button</param>
         void OnAddCowboyCoffeeButtonClicked(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<OrderControl>();
@@ -252,106 +256,143 @@ namespace PointOfSale
                 //order.Add(new CowboyCoffee());
             }
         }
-        void OnAddJerkedSodaButtonClicked(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order order)
-            {
-                order.Add(new JerkedSoda());
-            }
-        }
-        void OnAddTexasTeaButtonClicked(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order order)
-            {
-                OnItemAddButtonClicked(sender, e);
-                //order.Add(new TexasTea());
-            }
-        }
-        void OnAddWaterButtonClicked(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order order)
-            {
-                OnItemAddButtonClicked(sender, e);
-                //order.Add(new Water());
-            }
-        }
 
-        private OrderControl orderControl;
-        public void OnItemAddButtonClicked(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// adds the jerked soda to the order
+        /// </summary>
+        /// <param name="sender">the jerked soda</param>
+        /// <param name="e">information associated with the button</param>
+        void OnAddJerkedSodaButtonClicked(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-
-                if (sender is Button button)
-                {
-                    if ((string)button.Tag == "CowpokeChili")
-                    {
-                        var entree = new CowpokeChili();
-                        var screen = new CustomizedCowpokeChili();
-                        screen.DataContext = entree;
-                        //order.Add(new CowpokeChili());
-                        orderControl?.SwapScreen(screen);
-                    }
-                    else if ((string)button.Tag == "AngryChicken")
-                    {
-                        var entree = new AngryChicken();
-                        var screen = new CustomizedAngryChicken();
-                        screen.DataContext = entree;
-                        //order.Add(new AngryChicken());
-                        orderControl.SwapScreen(screen);
-                    }
-                    else if((string)button.Tag == "TrailBurger")
-                    {
-                        var entree = new TrailBurger();
-                        var screen = new CustomizedTrailBurger();
-                        screen.DataContext = entree;
-                        orderControl.SwapScreen(screen);
-                    }
-                    else if ((string)button.Tag == "DakotaDoubleBurger")
-                    {
-                        var entree = new DakotaDoubleBurger();
-                        var screen = new CustomizedDakotaDoubleBurger();
-                        screen.DataContext = entree;
-                        orderControl.SwapScreen(screen);
-                    }
-                    else if ((string)button.Tag == "TexasTripleBurger")
-                    {
-                        var entree = new TexasTripleBurger();
-                        var screen = new CustomizedTexasTripleBurger();
-                        screen.DataContext = entree;
-                        orderControl.SwapScreen(screen);
-                    }
-                    else if ((string)button.Tag == "PecosPulledPork")
-                    {
-                        var entree = new PecosPulledPork();
-                        var screen = new CustomizedPecosPulledPork();
-                        screen.DataContext = entree;
-                        orderControl.SwapScreen(screen);
-                    }
-                    else if ((string)button.Tag == "CowboyCoffee")
-                    {
-                        var entree = new CowboyCoffee();
-                        var screen = new CustomizedCowboyCoffee(DataContext);
-                        screen.DataContext = entree;
-                        orderControl.SwapScreen(screen);
-                    }
-                    else if ((string)button.Tag == "TexasTea")
-                    {
-                        var entree = new TexasTea();
-                        var screen = new CustomizedTexasTea();
-                        screen.DataContext = entree;
-                        orderControl.SwapScreen(screen);
-                    }
-                    else if ((string)button.Tag == "Water")
-                    {
-                        var entree = new Water();
-                        var screen = new CustomizedWater();
-                        screen.DataContext = entree;
-                        orderControl.SwapScreen(screen);
-                    }
-                }
+                var drink = new JerkedSoda();
+                var screen = new CustomizedJerkSoda(DataContext);
+                screen.DataContext = drink;
+                order.Add(drink);
+                orderControl?.SwapScreen(screen);
             }
         }
+
+        /// <summary>
+        /// adds texas tea to the order
+        /// </summary>
+        /// <param name="sender">the texas tea</param>
+        /// <param name="e">information associated with the button</param>
+        void OnAddTexasTeaButtonClicked(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<OrderControl>();
+            if (DataContext is Order order)
+            {
+                var drink = new TexasTea();
+                var screen = new CustomizedTexasTea(DataContext);
+                screen.DataContext = drink;
+                order.Add(drink);
+                orderControl?.SwapScreen(screen);
+
+                //OnItemAddButtonClicked(sender, e);
+                //order.Add(new TexasTea());
+            }
+        }
+
+        /// <summary>
+        /// adds water to the order
+        /// </summary>
+        /// <param name="sender">the water</param>
+        /// <param name="e">information associated with the button</param>
+        void OnAddWaterButtonClicked(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<OrderControl>();
+            if (DataContext is Order order)
+            {
+                var drink = new Water();
+                var screen = new CustomizedWater(DataContext);
+                screen.DataContext = drink;
+                order.Add(drink);
+                orderControl?.SwapScreen(screen);
+
+                //OnItemAddButtonClicked(sender, e);
+                //order.Add(new Water());
+            }
+        }
+
+        //private OrderControl orderControl;
+        //public void OnItemAddButtonClicked(object sender, RoutedEventArgs e)
+        //{
+        //    var orderControl = this.FindAncestor<OrderControl>();
+        //    if (DataContext is Order order)
+        //    {
+
+        //        if (sender is Button button)
+        //        {
+        //            if ((string)button.Tag == "CowpokeChili")
+        //            {
+        //                var entree = new CowpokeChili();
+        //                var screen = new CustomizedCowpokeChili();
+        //                screen.DataContext = entree;
+        //                //order.Add(new CowpokeChili());
+        //                orderControl?.SwapScreen(screen);
+        //            }
+        //            else if ((string)button.Tag == "AngryChicken")
+        //            {
+        //                var entree = new AngryChicken();
+        //                var screen = new CustomizedAngryChicken();
+        //                screen.DataContext = entree;
+        //                //order.Add(new AngryChicken());
+        //                orderControl.SwapScreen(screen);
+        //            }
+        //            else if((string)button.Tag == "TrailBurger")
+        //            {
+        //                var entree = new TrailBurger();
+        //                var screen = new CustomizedTrailBurger();
+        //                screen.DataContext = entree;
+        //                orderControl.SwapScreen(screen);
+        //            }
+        //            else if ((string)button.Tag == "DakotaDoubleBurger")
+        //            {
+        //                var entree = new DakotaDoubleBurger();
+        //                var screen = new CustomizedDakotaDoubleBurger();
+        //                screen.DataContext = entree;
+        //                orderControl.SwapScreen(screen);
+        //            }
+        //            else if ((string)button.Tag == "TexasTripleBurger")
+        //            {
+        //                var entree = new TexasTripleBurger();
+        //                var screen = new CustomizedTexasTripleBurger();
+        //                screen.DataContext = entree;
+        //                orderControl.SwapScreen(screen);
+        //            }
+        //            else if ((string)button.Tag == "PecosPulledPork")
+        //            {
+        //                var entree = new PecosPulledPork();
+        //                var screen = new CustomizedPecosPulledPork();
+        //                screen.DataContext = entree;
+        //                orderControl.SwapScreen(screen);
+        //            }
+        //            else if ((string)button.Tag == "CowboyCoffee")
+        //            {
+        //                var entree = new CowboyCoffee();
+        //                var screen = new CustomizedCowboyCoffee(DataContext);
+        //                screen.DataContext = entree;
+        //                orderControl.SwapScreen(screen);
+        //            }
+        //            else if ((string)button.Tag == "TexasTea")
+        //            {
+        //                var entree = new TexasTea();
+        //                //var screen = new CustomizedTexasTea();
+        //                //screen.DataContext = entree;
+        //                //orderControl.SwapScreen(screen);
+        //            }
+        //            else if ((string)button.Tag == "Water")
+        //            {
+        //                var entree = new Water();
+        //                var screen = new CustomizedWater();
+        //                screen.DataContext = entree;
+        //                orderControl.SwapScreen(screen);
+        //            }
+        //        }
+          //  }
+       // }
     }
 }
