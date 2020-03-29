@@ -27,6 +27,7 @@ namespace PointOfSale
         void OnAddItemButtonClicked(object sender, RoutedEventArgs e)
         {
             order.Add(new CowpokeChili());
+            
         }
     }
 }
