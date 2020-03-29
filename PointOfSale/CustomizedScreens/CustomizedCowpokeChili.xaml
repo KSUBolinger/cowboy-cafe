@@ -17,6 +17,6 @@
             <Label>Sour Cream</Label>
             <CheckBox IsChecked="{Binding Path=SourCream}"/>
         </StackPanel>
-        <Button Name="AddItem" Click="OnAddItemButtonClicked">Add Item</Button>
+        <!--<Button Name="AddItem" Click="OnAddItemButtonClicked">Add Item</Button>-->
     </StackPanel>
 </UserControl>

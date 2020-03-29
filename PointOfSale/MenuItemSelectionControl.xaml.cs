@@ -154,7 +154,7 @@ namespace PointOfSale
                         var screen = new CustomizedCowpokeChili();
                         screen.DataContext = entree;
                         //order.Add(new CowpokeChili());
-                        orderControl.SwapScreen(screen);
+                        orderControl?.SwapScreen(screen);
                     }
                     else if ((string)button.Tag == "AngryChicken")
                     {
