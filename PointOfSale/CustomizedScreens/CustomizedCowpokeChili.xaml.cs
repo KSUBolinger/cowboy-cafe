@@ -19,15 +19,15 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizedCowpokeChili : UserControl
     {
-        private Order order;
+        //private Order order;
         public CustomizedCowpokeChili()
         {
             InitializeComponent();
         }
-        void OnAddItemButtonClicked(object sender, RoutedEventArgs e)
-        {
-            order.Add(new CowpokeChili());
+        //void OnAddItemButtonClicked(object sender, RoutedEventArgs e)
+        //{
+        //    order.Add(new CowpokeChili());
             
-        }
+        //}
     }
 }

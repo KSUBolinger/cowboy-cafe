@@ -6,15 +6,47 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Width" Value="190"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Background" Value="Ivory"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="Wheat"/>
+            <Setter Property="FontSize" Value="22"/>
+        </Style>
+    </UserControl.Resources>
     <StackPanel>
-        <TextBlock FontSize="30" Text="Customized Cowboy Coffee"/>
+        <TextBlock FontSize="20" Text="Customized Cowboy Coffee"/>
+        
+        <Label>Sizes</Label>
         <StackPanel Orientation="Horizontal">
-            <Label>Ice</Label>
-            <CheckBox IsChecked="{Binding Path=Ice}"/>
-            <Label>Room For Cream</Label>
-            <CheckBox IsChecked="{Binding Path=RoomForCream}"/>
-            <Label>Decaf</Label>
-            <CheckBox IsChecked="{Binding Path=Decaf}"/>
+            <Button Name="Small_Button" Click="Button_Click">Small</Button>
+            <Button Name="Medium_Button" Click="Button_Click">Medium</Button>
+            <Button Name="Large_Button" Click="Button_Click">Large</Button>
+        </StackPanel>
+        
+        <Label>Decaf Options</Label>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="Decaf_Button" Click="Button_Click">Decaf</Button>
+            <Button Name="NonDecaf_Button" Click="Button_Click">Regular</Button>
+        </StackPanel>
+        
+        <Label>Cream Options</Label>
+        <StackPanel Orientation="Horizontal">
+             <Button Name="Cream_Button" Click="Button_Click">Cream</Button>
+            <Button Name="NoCream_Button" Click="Button_Click">No Cream</Button>
+        </StackPanel>
+        
+        <Label>Ice Options</Label>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="Ice_Button" Click="Button_Click">Iced</Button>
+            <Button Name="NoIce_Button" Click="Button_Click">Hot</Button>
         </StackPanel>
     </StackPanel>
 </UserControl>

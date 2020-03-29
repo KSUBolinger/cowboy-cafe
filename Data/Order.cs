@@ -71,5 +71,12 @@ namespace CowboyCafe.Data
             items = new List<IOrderItem>();
             OrderNumber = number;
         }
+
+        public void InvokePropertyChanged()
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
+        }
     }
 }
