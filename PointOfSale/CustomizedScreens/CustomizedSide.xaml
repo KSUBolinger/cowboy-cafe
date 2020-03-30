@@ -6,9 +6,15 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="RadioButton">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+    </UserControl.Resources>
     <StackPanel>
         <TextBlock FontSize="30" Text="Size" Foreground="Wheat"/>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Vertical">
             <RadioButton Name="Small_Button" Click="Button_Clicked">Small</RadioButton>
             <RadioButton Name="Medium_Button" Click="Button_Clicked">Medium</RadioButton>
             <RadioButton Name="Large_Button" Click="Button_Clicked">Large</RadioButton>

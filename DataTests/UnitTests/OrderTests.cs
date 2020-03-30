@@ -12,7 +12,7 @@ using System.Linq;
 
 namespace CowboyCafe.DataTests.UnitTests
 {
-    
+    /*
     public class OrderTests
     {
         class MockOrderItem : IOrderItem
@@ -85,5 +85,11 @@ namespace CowboyCafe.DataTests.UnitTests
                 Assert.Contains(item, order.Items);
             }
         }
-    }
+        [Fact]
+        public void ChangingBreadPropertyShouldInvokePropertyChangedForBread()
+        {
+            var chicken = new AngryChicken();
+            Assert.PropertyChanged(chicken, "Bread", () => { chicken.Bread = false; });
+        }
+    }*/
 }

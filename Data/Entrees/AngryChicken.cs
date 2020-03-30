@@ -25,6 +25,7 @@ namespace CowboyCafe.Data
             { 
                 bread = value;
                 NotifyPropertyChanged("Bread");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
 

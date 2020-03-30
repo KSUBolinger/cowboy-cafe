@@ -7,12 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
-        <TextBlock FontSize="30" Text="Customized Angry Chicken"/>
+        <TextBlock FontSize="30" Text="Customized Angry Chicken" Foreground="Wheat" HorizontalAlignment="Center"/>
         <StackPanel Orientation="Horizontal">
             <Label>Bread</Label>
-            <CheckBox IsChecked="{Binding Path=Bread}"/>
+            <CheckBox IsChecked="{Binding Path=Bread}" FontSize="20"/>
             <Label>Pickle</Label>
-            <CheckBox IsChecked="{Binding Path=Pickle}"/>
+            <CheckBox IsChecked="{Binding Path=Pickle}" FontSize="20"/>
         </StackPanel>
     </StackPanel>
 </UserControl>
