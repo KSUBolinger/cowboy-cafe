@@ -53,6 +53,7 @@ namespace CowboyCafe.Data
             { 
                 mustard = value;
                 NotifyPropertyChanged("Mustard");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
 

@@ -9,7 +9,9 @@ namespace CowboyCafe.DataTests.UnitTests
 {
     public class CowpokeChiliPropertyChangedTests
     {
-        //Test to do: sourcream, tortilla strips, green onions 
+        /// <summary>
+        /// Implementation Test
+        /// </summary>
         [Fact]
         public void CowpokeChiliShouldImplementNotifyPropertyChanged()
         {
@@ -17,7 +19,9 @@ namespace CowboyCafe.DataTests.UnitTests
             Assert.IsAssignableFrom<INotifyPropertyChanged>(chili);
         }
 
-        //cheese test
+        /// <summary>
+        /// Cheese tests
+        /// </summary>
         [Fact]
         public void ChangingCheeseShouldInvokePropertyChangedForCheese()
         {
@@ -58,6 +62,52 @@ namespace CowboyCafe.DataTests.UnitTests
             Assert.PropertyChanged(chili, "SpecialInstructions", () =>
             {
                 chili.SourCream = false;
+            });
+        }
+
+        /// <summary>
+        /// Test for sour cream
+        /// </summary>
+        [Fact]
+        public void ChangingTortillaStripsShouldInvokePropertyChangedForTorillaStrips()
+        {
+            var chili = new CowpokeChili();
+            Assert.PropertyChanged(chili, "TortillaStrips", () =>
+            {
+                chili.TortillaStrips = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingTortillaStripsShouldInvokePropertyChangedForSpecialInstructions()
+        {
+            var chili = new CowpokeChili();
+            Assert.PropertyChanged(chili, "SpecialInstructions", () =>
+            {
+                chili.TortillaStrips = false;
+            });
+        }
+
+        /// <summary>
+        /// test for green onions
+        /// </summary>
+        [Fact]
+        public void ChangingGreenOnionsShouldInvokePropertyChangedForGreenOnions()
+        {
+            var chili = new CowpokeChili();
+            Assert.PropertyChanged(chili, "GreenOnions", () =>
+            {
+                chili.GreenOnions = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingGreenOnionsShouldInvokePropertyChangedForSpecialInstructions()
+        {
+            var chili = new CowpokeChili();
+            Assert.PropertyChanged(chili, "SpecialInstructions", () =>
+            {
+                chili.GreenOnions = false;
             });
         }
     }
