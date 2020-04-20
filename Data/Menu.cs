@@ -66,6 +66,10 @@ namespace CowboyCafe.Data
             return DrinkOrder;
         }
 
+        /// <summary>
+        /// this compiles a complete list of all items on the menu
+        /// </summary>
+        /// <returns></returns>
         public static IEnumerable<IOrderItem> CompleteOrder()
         {
             List<IEnumerable<IOrderItem>> order = new List<IEnumerable<IOrderItem>>();
@@ -74,8 +78,8 @@ namespace CowboyCafe.Data
             order.Add(Drinks());
             order.Add(Sides());
 
-            order = order.AsEnumerable();
-            return order;
+            IEnumerable<IOrderItem> completeOrder = order.AsEnumerable();
+            return completeOrder;
         }
     }
 }
